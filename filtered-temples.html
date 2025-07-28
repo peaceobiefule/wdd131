@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF‑8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Temple Album (Filtered)</title>
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+  <header class="site-header container">
+    <h1>Temple Album</h1>
+    <nav>
+      <button data-filter="home">Home</button>
+      <button data-filter="old">Old</button>
+      <button data-filter="new">New</button>
+      <button data-filter="large">Large</button>
+      <button data-filter="small">Small</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="templeCards" class="grid-gallery"></section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> Obiefule Ngozi Peace</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
