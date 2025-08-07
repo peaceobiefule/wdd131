@@ -67,7 +67,22 @@ const products = [
       const now = new Date();
       timeEl.textContent = `Current Time: ${now.toLocaleTimeString()}`;
     }
-  
+    
+    const reviewCount = localStorage.getItem("reviewCount") || 0;
+    document.getElementById("reviewCount").textContent = reviewCount;
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.querySelector("form");
+      
+        if (form) {
+          form.addEventListener("submit", () => {
+            let count = localStorage.getItem("reviewCount");
+            count = count ? parseInt(count) + 1 : 1;
+            localStorage.setItem("reviewCount", count);
+          });
+        }
+      });
+      
+
     //user country using IP geolocation API
     const countryEl = document.getElementById("country");
     if (countryEl) {
