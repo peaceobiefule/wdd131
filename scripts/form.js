@@ -1,59 +1,49 @@
 
 const products = [
-    {
-      id: "fc-1888",
-      name: "Mountain Tent",
-      averagerating: 4.5
-    },
-    {
-      id: "fc-2050",
-      name: "Sleeping Bag",
-      averagerating: 4.7
-    },
-    {
-      id: "fs-1987",
-      name: "Camp Stove",
-      averagerating: 3.5
-    },
-    {
-      id: "ac-2000",
-      name: "Trekking Poles",
-      averagerating: 3.9
-    },
-    {
-      id: "jj-1969",
-      name: "Backpack",
-      averagerating: 5.0
-    }
+    { id: "fc-1888", name: "Mountain Tent", averagerating: 4.5 },
+    { id: "fc-2050", name: "Sleeping Bag", averagerating: 4.7 },
+    { id: "fs-1987", name: "Camp Stove", averagerating: 3.5 },
+    { id: "ac-2000", name: "Trekking Poles", averagerating: 3.9 },
+    { id: "jj-1969", name: "Backpack", averagerating: 5.0 }
   ];
   
   // DOM ready
   document.addEventListener("DOMContentLoaded", () => {
     const productDropdown = document.getElementById("product");
   
-    // Add the placeholder option
-    const placeholder = document.createElement("option");
-    placeholder.textContent = "Select a Product ...";
-    placeholder.disabled = true;
-    placeholder.selected = true;
-    placeholder.value = "";
-    productDropdown.appendChild(placeholder);
+    // Populate product dropdown if it exists
+    if (productDropdown) {
+      const placeholder = document.createElement("option");
+      placeholder.textContent = "Select a Product ...";
+      placeholder.disabled = true;
+      placeholder.selected = true;
+      placeholder.value = "";
+      productDropdown.appendChild(placeholder);
   
-    // Populate product options
-    products.forEach(product => {
-      const option = document.createElement("option");
-      option.value = product.id;
-      option.textContent = product.name;
-      productDropdown.appendChild(option);
-    });
+      products.forEach(product => {
+        const option = document.createElement("option");
+        option.value = product.id; // value is ID
+        option.textContent = product.name; // display is name
+        productDropdown.appendChild(option);
+      });
+    }
   
-    // Review submission counter
+    // Handle review form submission
     const form = document.getElementById("reviewForm");
-    form.addEventListener("submit", () => {
-      let count = parseInt(localStorage.getItem("reviewCount")) || 0;
-      count++;
-      localStorage.setItem("reviewCount", count);
-    });
+    if (form) {
+      form.addEventListener("submit", () => {
+        let count = localStorage.getItem("reviewCount");
+        count = count ? parseInt(count) + 1 : 1;
+        localStorage.setItem("reviewCount", count);
+      });
+    }
+  
+    // Display total review count if element exists (for review.html)
+    const reviewCountEl = document.getElementById("reviewCount");
+    if (reviewCountEl) {
+      const reviewCount = localStorage.getItem("reviewCount") || 0;
+      reviewCountEl.textContent = reviewCount;
+    }
   
     // Display last modified date
     const lastModifiedEl = document.getElementById("lastModified");
@@ -67,23 +57,8 @@ const products = [
       const now = new Date();
       timeEl.textContent = `Current Time: ${now.toLocaleTimeString()}`;
     }
-    
-    const reviewCount = localStorage.getItem("reviewCount") || 0;
-    document.getElementById("reviewCount").textContent = reviewCount;
-    document.addEventListener("DOMContentLoaded", () => {
-        const form = document.querySelector("form");
-      
-        if (form) {
-          form.addEventListener("submit", () => {
-            let count = localStorage.getItem("reviewCount");
-            count = count ? parseInt(count) + 1 : 1;
-            localStorage.setItem("reviewCount", count);
-          });
-        }
-      });
-      
-
-    //user country using IP geolocation API
+  
+    // Get user country via IP API
     const countryEl = document.getElementById("country");
     if (countryEl) {
       fetch("https://ipapi.co/json/")
