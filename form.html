@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Review Form</title>
+  <link rel="stylesheet" href="styles/form.css" />
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+
+  <main>
+    <form id="reviewForm" action="review.html" method="get">
+      <label for="product">Product Name <span class="required">*</span></label>
+      <select id="product" name="product" required>
+        <option value="">Choose a product...</option>
+      </select>
+
+      <fieldset>
+        <legend>Overall Rating <span class="required">*</span></legend>
+        <label><input type="radio" name="rating" value="1" required>★☆☆☆☆</label>
+        <label><input type="radio" name="rating" value="2">★★☆☆☆</label>
+        <label><input type="radio" name="rating" value="3">★★★☆☆</label>
+        <label><input type="radio" name="rating" value="4">★★★★☆</label>
+        <label><input type="radio" name="rating" value="5">★★★★★</label>
+      </fieldset>
+
+      <label for="install">Date of Purchase <span class="required">*</span></label>
+      <input type="date" id="install" name="install" required>
+
+      <fieldset>
+        <legend>Useful Features (select all that apply)</legend>
+        <label><input type="checkbox" name="features" value="Durability">Durability</label>
+        <label><input type="checkbox" name="features" value="Design">Design</label>
+        <label><input type="checkbox" name="features" value="Ease of Use">Ease of Use</label>
+        <label><input type="checkbox" name="features" value="Performance">Performance</label>
+      </fieldset>
+
+      <label for="review">Written Review</label>
+      <textarea id="review" name="review" rows="5" placeholder="Share your experience..."></textarea>
+
+      <label for="user">Your Name</label>
+      <input type="text" id="user" name="user" placeholder="Optional">
+
+      <button type="submit">Submit Review</button>
+    </form>
+  </main>
+
+  
+    <footer>
+        <p> &copy; <span id="year"></span> Peace Obiefule — NG Nigeria</p>
+        <p> Last Modified: <span id="lastModified"></span></p>
+      </footer> 
+   
+  
+</body>
+</html>
