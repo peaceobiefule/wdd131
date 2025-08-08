@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Healthy Family Meals - Home</title>
+  <link rel="stylesheet" href="site.css">
+  <style>
+    /* Additional homepage-specific styling */
+    .hero-section {
+      position: relative;
+      background: url('images/hero.jpg') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+    .hero-overlay {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      border-radius: 10px;
+    }
+    .hero-overlay h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero-overlay p {
+      font-size: 1.2rem;
+    }
+    .why-us {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .why-card {
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .why-card img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 0.5rem;
+    }
+    @media (max-width: 600px) {
+      .hero-overlay h1 { font-size: 1.8rem; }
+      .hero-overlay p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="meal-plan.html">Meal Plans</a>
+        <a href="form.html">Contact / Review</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <img src="images/my-background.jpeg" alt="Hero background" class="hero-image">
+    <div class="hero-overlay">
+      <h1>Healthy Family Meals</h1>
+      <p>Nutritious, Delicious, and Easy-to-Make Meals for the Whole Family</p>
+    </div>
+  </section>
+  
+
+
+  <main class="container" id="main-content">
+    <!-- Welcome Intro -->
+    <section aria-labelledby="intro">
+      <h2 id="intro">Welcome</h2>
+      <p>We help busy families prepare healthy, tasty meals without spending hours in the kitchen. Get meal plans, recipes, grocery lists, and time-saving tips right here.</p>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section aria-labelledby="why-us">
+      <h2 id="why-us">Why Choose Us</h2>
+      <div class="why-us">
+        <div class="why-card">
+          <img src="images/icon-healthy.jpeg" alt="Healthy icon">
+          <h3>Healthy Recipes</h3>
+          <p>Balanced, family-friendly meals designed by nutrition enthusiasts.</p>
+        </div>
+        <div class="why-card">
+          <img src="images/icon-time.png" alt="Time saving icon">
+          <h3>Time-Saving</h3>
+          <p>Quick prep and cook times so you can spend more moments together.</p>
+        </div>
+        <div class="why-card">
+          <img src="images/icon-family.jpeg" alt="Family icon">
+          <h3>Family Focused</h3>
+          <p>Recipes everyone will enjoy, from toddlers to grandparents.</p>
+        </div>
+      </div>
+    </section>
+
+<!-- Featured Recipes -->
+<section aria-labelledby="featured">
+    <h2 id="featured">Featured Recipes</h2>
+    <div class="recipe-grid" id="featuredRecipes">
+      <article class="recipe-card">
+        <img src="images/grilled-chicken.jpeg" alt="Grilled Chicken Salad">
+        <h3>Grilled Chicken Salad</h3>
+        <p>A fresh mix of grilled chicken, leafy greens, and tangy vinaigrette.</p>
+        <a href="recipes.html#grilled-chicken" class="btn">View Recipe</a>
+      </article>
+      <article class="recipe-card">
+        <img src="images/veggie-pasta.jpeg" alt="Vegetable Pasta Primavera">
+        <h3>Veggie Pasta Primavera</h3>
+        <p>Colorful vegetables tossed with pasta in a light garlic sauce.</p>
+        <a href="recipes.html#veggie-pasta" class="btn">View Recipe</a>
+      </article>
+      <article class="recipe-card">
+        <img src="images/salmon-bowl.jpeg" alt="Teriyaki Salmon Bowl">
+        <h3>Teriyaki Salmon Bowl</h3>
+        <p>Flaky salmon served with steamed rice, vegetables, and teriyaki glaze.</p>
+        <a href="recipes.html#salmon-bowl" class="btn">View Recipe</a>
+      </article>
+    </div>
+  </section>
+  
+
+    <!-- Newsletter -->
+    <section aria-labelledby="newsletter">
+      <h2 id="newsletter">Newsletter</h2>
+      <p>Get a fresh meal plan and grocery list every Sunday, straight to your inbox.</p>
+      <form id="newsletterForm" onsubmit="return false;">
+        <label for="newsletter-email">Email</label>
+        <input id="newsletter-email" name="email" type="email" placeholder="you@email.com" required>
+        <button id="newsletterSubmit" type="submit">Subscribe</button>
+      </form>
+      <p id="newsletterMsg" class="meta-line" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="meta-line">Site last modified: <span id="lastModified"></span> • Local time: <span id="localTime"></span></p>
+      <p>&copy; <span id="year"></span> Healthy Family Meals</p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Recipes - Healthy Family Meals</title>
+  <link rel="stylesheet" href="site.css">
+
+  <!-- Additional CSS just for recipe.html -->
+  <style>
+    body.recipe-page {
+      background-color: #fafafa;
+      font-family: Arial, sans-serif;
+    }
+
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .recipe-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .recipe-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    .recipe-card img {
+      width: 100%;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .recipe-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .recipe-content {
+      padding: 15px;
+    }
+
+    .recipe-content h3 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+
+    .recipe-meta {
+      font-size: 0.9em;
+      color: #777;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body class="recipe-page">
+  <header>
+    <div class="container">
+      <h1>Healthy Family Meals</h1>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="meal-plan.html">Meal Plans</a>
+        <a href="form.html">Contact / Review</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>All Recipes</h2>
+      <div class="recipe-grid">
+  
+        <!-- Recipe Card 1 -->
+        <div class="recipe-card">
+          <img src="images/recipe1.jpeg" alt="Grilled Chicken Salad">
+          <div class="recipe-content">
+            <h3>Grilled Chicken Salad</h3>
+            <p><strong>Ingredients:</strong> 2 chicken breasts, 4 cups mixed greens, 1/2 cup cherry tomatoes, 1/4 cup sliced cucumbers, 2 tbsp olive oil, 1 tbsp balsamic vinegar, salt & pepper.</p>
+            <p><strong>Instructions:</strong> Grill chicken until cooked through. Slice and toss with greens, tomatoes, and cucumbers. Whisk olive oil, balsamic, salt, and pepper for dressing.</p>
+            <div class="recipe-meta">⏱ 20 mins • 🍽 Serves 2</div>
+          </div>
+        </div>
+  
+        <!-- Recipe Card 2 -->
+        <div class="recipe-card">
+          <img src="images/recipe2.jpeg" alt="Vegetable Stir Fry">
+          <div class="recipe-content">
+            <h3>Vegetable Stir Fry</h3>
+            <p><strong>Ingredients:</strong> 1 cup broccoli florets, 1 red bell pepper, 1 cup carrots, 2 tbsp soy sauce, 1 tbsp sesame oil, 2 garlic cloves, minced.</p>
+            <p><strong>Instructions:</strong> Heat sesame oil in a wok. Add garlic, then vegetables, and stir fry for 5–6 mins. Add soy sauce and cook for another 2 mins. Serve hot over rice.</p>
+            <div class="recipe-meta">⏱ 15 mins • 🍽 Serves 3</div>
+          </div>
+        </div>
+  
+        <!-- Recipe Card 3 -->
+        <div class="recipe-card">
+          <img src="images/recipe3.jpeg" alt="Baked Salmon with Veggies">
+          <div class="recipe-content">
+            <h3>Baked Salmon with Veggies</h3>
+            <p><strong>Ingredients:</strong> 2 salmon fillets, 1 cup zucchini slices, 1 cup bell peppers, 1 tbsp lemon juice, 2 tbsp olive oil, salt & pepper.</p>
+            <p><strong>Instructions:</strong> Preheat oven to 190°C (375°F). Place salmon and vegetables on a baking sheet, drizzle with olive oil and lemon juice, season, and bake for 15–18 mins.</p>
+            <div class="recipe-meta">⏱ 25 mins • 🍽 Serves 2</div>
+          </div>
+        </div>
+  
+        <!-- Recipe Card 4 -->
+        <div class="recipe-card">
+          <img src="images/recipe4.jpeg" alt="Quinoa Salad">
+          <div class="recipe-content">
+            <h3>Quinoa Salad</h3>
+            <p><strong>Ingredients:</strong> 1 cup cooked quinoa, 1/2 cup diced cucumber, 1/2 cup cherry tomatoes, 1/4 cup feta cheese, 2 tbsp olive oil, juice of 1 lemon.</p>
+            <p><strong>Instructions:</strong> Mix quinoa with vegetables and feta. Whisk olive oil and lemon juice together, pour over salad, toss, and chill before serving.</p>
+            <div class="recipe-meta">⏱ 15 mins • 🍽 Serves 4</div>
+          </div>
+        </div>
+  
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year2"></span> Healthy Family Meals</p>
+    </div>
+  </footer>
+  
+  <script>
+    document.getElementById("year2").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,392 @@
+/* css/site.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root{
+    --primary: #2e7d32;
+    --accent: #ff7043;
+    --bg: #fff8e1;
+    --text: #333;
+    --card-bg: #ffffff;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    padding: 20px;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header {
+    text-align: center;
+    background-color: var(--primary);
+    color: white;
+    padding: 24px 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+  
+  .tagline {
+    font-style: italic;
+    margin-top: 8px;
+    opacity: 0.95;
+  }
+  
+  /* Main layout */
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* sections */
+  main section {
+    margin-bottom: 24px;
+    padding: 18px;
+    background-color: var(--card-bg);
+    border-left: 6px solid var(--primary);
+    box-shadow: 0 0 8px rgba(0,0,0,0.04);
+    border-radius: 6px;
+  }
+  
+  h2 {
+    color: var(--primary);
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+  }
+  
+  h3 {
+    color: var(--accent);
+    margin-top: 10px;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  ul {
+    margin-left: 20px;
+    list-style-type: disc;
+  }
+  
+  img {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: white;
+    max-width: 100%;
+    display:block;
+  }
+  
+  /* nav */
+  nav {
+    display:flex;
+    justify-content:center;
+    gap:16px;
+    margin: 12px 0 20px;
+  }
+  nav a {
+    color: white;
+    background: rgba(255,255,255,0.08);
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight:600;
+  }
+  nav a:focus, nav a:hover {
+    background: rgba(255,255,255,0.16);
+  }
+  
+  /* Cards for recipes */
+  .recipe-grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .card {
+    background:white;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+  .card h4 { margin-bottom:8px;}
+  .card p { font-size:0.95rem; color:#444; }
+  
+  /* Form styles */
+  /* --- Form Page Styling --- */
+form {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2rem auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  form h2 {
+    margin-bottom: 1rem;
+    color: #2d6a4f; /* Deep green for headings */
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+  }
+  
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #2d6a4f;
+    outline: none;
+    box-shadow: 0 0 5px rgba(45, 106, 79, 0.3);
+  }
+  
+  fieldset {
+    border: none;
+    margin-top: 1rem;
+    padding: 0;
+  }
+  
+  legend {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #444;
+  }
+  
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-right: 0.5rem;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  input[type="submit"] {
+    background: #2d6a4f;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background: #1b4332;
+  }
+  
+   /* Newsletter Subscribe Button Styles */
+#newsletterSubmit {
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* Hover effect */
+  #newsletterSubmit:hover {
+    background-color: #218838; /* Darker green */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  }
+  
+  /* Active (click) effect */
+  #newsletterSubmit:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* Focus accessibility */
+  #newsletterSubmit:focus {
+    outline: 3px solid #90ee90; /* Light green outline */
+    outline-offset: 3px;
+  }
+  
+
+  /* Make the form responsive */
+  @media (max-width: 600px) {
+    form {
+      padding: 1.2rem;
+    }
+  }
+  
+  
+  .hero-section {
+    position: relative;
+    height: 400px; /* Adjust as needed */
+    overflow: hidden;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps the image covering the whole section */
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+/* --- Meal Plan UI (add to site.css) --- */
+.meal-plan-img {
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 18px 0;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    display: block;
+  }
+  
+  /* Day buttons */
+  .day-buttons {
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin: 10px 0 6px;
+  }
+  .day-btn {
+    background: #2e7d32;
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .day-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(46,125,50,0.15); }
+  .day-btn:focus { outline: 3px solid rgba(46,125,50,0.18); outline-offset: 2px; }
+  
+  /* Plan details card */
+  .plan-details {
+    margin-top: 20px;
+    padding: 16px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    min-height: 120px;
+  }
+  
+  /* Action buttons inside plan details */
+  .plan-actions {
+    margin-top: 12px;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .btn-small {
+    background: #ff7043;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .12s ease;
+  }
+  .btn-small:hover { transform: translateY(-2px); }
+  .btn-secondary {
+    background: transparent;
+    border: 1px solid #ccc;
+    color: #333;
+  }
+  
+  /* Shopping list display */
+  #shoppingListDisplay {
+    margin-top: 14px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #fafafa;
+    border: 1px dashed #e6e6e6;
+  }
+  
+  /* small toast message */
+  .temp-message {
+    display:inline-block;
+    padding:8px 12px;
+    border-radius: 999px;
+    background: rgba(46,125,50,0.12);
+    color: #2e7d32;
+    font-weight:600;
+    margin-left:8px;
+  }
+  
+  /* Extra content */
+  .meal-plan-extra { margin-top: 26px; line-height:1.6; }
+  .meal-plan-extra h3 { color:#2e7d32; margin-top:14px; }
+  
+  /* Responsive */
+  @media (max-width:600px){
+    .day-btn { flex: 1 1 45%; text-align:center; }
+    .plan-actions { flex-direction:column; gap:8px; }
+  }
+  
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 18px;
+    border-top: 1px solid #ccc;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  /* small helper */
+  .meta-line { font-size:0.9rem; color:#666; margin-top:6px; }
+  
+  /* Responsive tweaks */
+  @media (max-width:600px) {
+    header h1 { font-size:1.6rem; }
+    .tagline { font-size:0.95rem; }
+    body { padding:12px; }
+    nav { flex-wrap:wrap; gap:8px; }
+  }
+  

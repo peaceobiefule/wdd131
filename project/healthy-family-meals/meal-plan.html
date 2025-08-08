@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meal Plans - Healthy Family Meals</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Healthy Family Meals</h1>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="meal-plan.html">Meal Plans</a>
+        <a href="form.html">Contact / Review</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container"> 
+    <section>
+      <h2>Weekly Family Meal Plan</h2>
+      <p>Choose a day to view the family-friendly menu and downloadable grocery list.</p>
+
+      <!-- Decorative image for visual appeal -->
+      <img src="images/meal-plan.jpeg" alt="Healthy family meal on a table" class="meal-plan-img">
+
+      <div class="day-buttons">
+        <button class="day-btn" data-day="1">Day 1</button>
+        <button class="day-btn" data-day="2">Day 2</button>
+        <button class="day-btn" data-day="3">Day 3</button>
+        <button class="day-btn" data-day="4">Day 4</button>
+      </div>
+
+      <div id="planDetails" class="plan-details"></div>
+
+      <!-- Added extra content to make the page longer -->
+      <div class="meal-plan-extra">
+        <h3>How Our Meal Plans Work</h3>
+        <p>Our family meal plans are designed with nutrition, affordability, and taste in mind. Each plan includes a
+          full grocery list and simple cooking instructions. Whether you’re feeding picky eaters or adventurous
+          foodies, our meals strike the perfect balance between health and flavor.</p>
+
+        <h3>Benefits of a Weekly Meal Plan</h3>
+        <ul>
+          <li>Save time and reduce stress during the week</li>
+          <li>Lower your grocery bill with smart shopping lists</li>
+          <li>Encourage healthy eating for the whole family</li>
+          <li>Reduce food waste by planning ahead</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year3"></span> Healthy Family Meals</p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

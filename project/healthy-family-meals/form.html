@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact & Reviews - Healthy Family Meals</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Contact & Product Review</h1>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="meal-plan.html">Meal Plans</a>
+        <a href="form.html" aria-current="page">Contact / Review</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Submit a Product Review</h2>
+      <form id="reviewForm" action="review.html" method="get" novalidate>
+        
+        <label for="product">Product Name <span class="required" aria-hidden="true">*</span></label>
+        <select id="product" name="product" required>
+          <!-- Options populated by main.js -->
+        </select>
+
+        <fieldset>
+          <legend>Overall Rating <span aria-hidden="true">*</span></legend>
+          <label><input type="radio" name="rating" value="1" required> 1</label>
+          <label><input type="radio" name="rating" value="2"> 2</label>
+          <label><input type="radio" name="rating" value="3"> 3</label>
+          <label><input type="radio" name="rating" value="4"> 4</label>
+          <label><input type="radio" name="rating" value="5"> 5</label>
+        </fieldset>
+
+        <label for="install">Date of Installation <span aria-hidden="true">*</span></label>
+        <input type="date" id="install" name="install" required>
+
+        <fieldset>
+          <legend>Useful Features</legend>
+          <label><input type="checkbox" name="features" value="Durability"> Durability</label>
+          <label><input type="checkbox" name="features" value="Design"> Design</label>
+          <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
+          <label><input type="checkbox" name="features" value="Performance"> Performance</label>
+        </fieldset>
+
+        <label for="review">Written Review</label>
+        <textarea id="review" name="review" rows="5" placeholder="Share your experience..."></textarea>
+
+        <label for="user">Your Name</label>
+        <input id="user" name="user" type="text" placeholder="Optional">
+
+        <input type="submit" value="Submit Review">
+      </form>
+    </section>
+
+    <!-- Last modified date -->
+    <section>
+      <p>Last updated: <span id="lastModified"></span></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year4"></span> Healthy Family Meals</p>
+    </div>
+  </footer>
+
+  <!-- If main.js is inside scripts/ folder, change to scripts/main.js -->
+  <script src="main.js" defer></script>
+</body>
+</html>
